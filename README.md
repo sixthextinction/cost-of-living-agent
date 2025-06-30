@@ -8,6 +8,21 @@ Uses Bright Data SERP API to gather results from Google, and OpenAI to reason ab
 
 Once done, saves an executive report to a markdown file.
 
+## Modules
+
+- main.js: Runs everything; handles CLI, agents, and report generation.
+- config.js: Central config for knobs/dials to turn.
+- agent.js: The heart of the operation. Runs the Perceive -> Reason -> Reflect lifecycle per city; handles retries, steps, and analysis.
+- ai.js: Functions that handle talking to LLMs.
+- search.js: Uses Bright Data SERP API to fetch web search results.
+- cache.js: Simple filesystem-based cache for API responses to reduce cost and latency.
+- context.js: Stores each agent's central working memory.
+- strategies.js: Strategy management, adaptation.
+- scoring.js: City scoring logic.
+- reports.js: Generates the final markdown report.
+- utils.js: Project-wide helper functions (e.g., file ops, delays).
+
+
 ## Requirements
 
 - Node.js
